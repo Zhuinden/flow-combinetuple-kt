@@ -34,15 +34,15 @@ android {
 
 dependencies {
     //implementation(mapOf("dir" to "libs", "include" to listOf("*.jar")))
-    api("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
+    api("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72")
     api("com.github.Zhuinden:tuples-kt:1.0.0")
 
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.6")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7")
 
-    testImplementation("junit:junit:4.12")
-    testImplementation("org.assertj:assertj-core:3.9.1")
+    testImplementation("junit:junit:4.13")
+    testImplementation("org.assertj:assertj-core:3.16.1")
     testImplementation("org.mockito:mockito-core:2.15.0")
-    androidTestImplementation("junit:junit:4.12")
+    androidTestImplementation("junit:junit:4.13")
 }
 
 // build a jar with source files
