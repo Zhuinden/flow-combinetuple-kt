@@ -11,6 +11,10 @@ combineTuple(flow1, flow2, flow3)
     }
 ```
 
+## Why?
+
+It's useful when you want to combine multiple reactive streams together and get a combined object of the latest values, without defining an actual class with an actual name to do it.
+
 ## Using Flow-CombineTuple-KT
 
 In order to use Flow-CombineTuple-KT, you need to add `jitpack` to your project root `build.gradle.kts`
