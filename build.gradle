@@ -1,0 +1,74 @@
+buildscript {
+    ext.kotlin_version = '1.4.21'
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.6 // java 6
+targetCompatibility = 1.6
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    jcenter()
+}
+
+dependencies {
+    api 'com.github.Zhuinden:tuples-kt:1.1.0'
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.Zhuinden'
+            artifactId = 'flow-combinetuple-kt'
+            version = '1.1.0'
+
+            from components.java
+            artifact sourcesJar
+        }
+    }
+}
+
+wrapper {
+    gradleVersion = "6.5"
+    distributionType = Wrapper.DistributionType.ALL
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.6"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.6"
+    }
+}
