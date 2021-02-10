@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.4.21'
+    ext.kotlin_version = '1.4.30'
     repositories {
         mavenCentral()
         maven { url "https://jitpack.io" }
@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    api 'com.github.Zhuinden:tuples-kt:1.1.0'
+    api 'com.github.Zhuinden:tuples-kt:1.1.1'
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
 }
 
@@ -48,7 +48,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.github.Zhuinden'
             artifactId = 'flow-combinetuple-kt'
-            version = '1.1.0'
+            version = '1.1.1'
 
             from components.java
             artifact sourcesJar
@@ -65,10 +65,14 @@ compileKotlin {
     kotlinOptions {
         jvmTarget = "1.6"
     }
+    
+    kotlinOptions.moduleName = "com.zhuinden.flowcombinetuplekt"
 }
 
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.6"
     }
+    
+    kotlinOptions.moduleName = "com.zhuinden.flowcombinetuplekt"
 }
