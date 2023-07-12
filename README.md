@@ -2,7 +2,7 @@
 
 Flow-CombineTuple-KT contains helper functions for Flow, to combine their latest emissions into typed tuples.
 
-Under the hood, it uses Tuples-KT to help provide combiners from 2 to 16 arity.
+Under the hood, it uses Tuples-KT to help provide combiners from 2 to 36 arity.
 
 ``` kotlin
 combineTuple(flow1, flow2, flow3)
@@ -63,19 +63,19 @@ and then, add the dependency to your module's `build.gradle.kts` (or `build.grad
 
 ``` kotlin
 // build.gradle.kts
-implementation("com.github.Zhuinden:flow-combinetuple-kt:1.1.1")
+implementation("com.github.Zhuinden:flow-combinetuple-kt:1.2.0")
 ```
 
 or
 
 ``` groovy
 // build.gradle
-implementation 'com.github.Zhuinden:flow-combinetuple-kt:1.1.1'
+implementation 'com.github.Zhuinden:flow-combinetuple-kt:1.2.0'
 ```
 
 ## License
 
-    Copyright 2020 Gabor Varadi
+    Copyright 2020-2023 Gabor Varadi
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

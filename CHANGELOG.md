@@ -1,5 +1,12 @@
 # Change log
 
+-Flow-CombineTuple-KT 1.2.0 (2023-07-12)
+--------------------------------
+
+- Update tuples-kt to 1.2.0.
+
+- Add support for higher arity tuples.
+
 -Flow-CombineTuple-KT 1.1.1 (2021-02-10)
 --------------------------------
 

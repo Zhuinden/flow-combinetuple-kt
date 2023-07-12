@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    api 'com.github.Zhuinden:tuples-kt:1.1.1'
+    api 'com.github.Zhuinden:tuples-kt:1.2.0'
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
 }
 
@@ -48,7 +48,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.github.Zhuinden'
             artifactId = 'flow-combinetuple-kt'
-            version = '1.1.1'
+            version = '1.2.0'
 
             from components.java
             artifact sourcesJar
