@@ -1,5 +1,10 @@
 # Change log
 
+-Flow-CombineTuple-KT 1.3.0 (2023-12-07)
+--------------------------------
+
+- Add `combineStates(StateFlow<T1>...StateFlow<T36>)` and `combineAsState(Flow<T1>...Flow<T36>)`.
+
 -Flow-CombineTuple-KT 1.2.0 (2023-07-12)
 --------------------------------
 
