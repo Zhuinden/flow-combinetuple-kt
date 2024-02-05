@@ -95,7 +95,7 @@ or
 
 ``` groovy
 // build.gradle
-implementation 'com.github.Zhuinden:flow-combinetuple-kt:1.2.0'
+implementation 'com.github.Zhuinden:flow-combinetuple-kt:1.3.0'
 ```
 
 ## License
